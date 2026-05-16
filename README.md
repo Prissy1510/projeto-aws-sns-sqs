@@ -71,7 +71,6 @@ Aqui estão as evidências da implementação e dos testes realizados com sucess
 1. Configure um tópico padrão no Amazon SNS.
 2. Crie duas filas SQS e faça a assinatura (Subscription) no tópico.
 3. Configure as permissões de acesso para permitir o `SendMessage` vindo do SNS.
-4. (Opcional) Conecte uma função Lambda para processar os itens da fila.
-5. Durante a configuração das filas, implementei uma Redrive Policy definindo um maxReceiveCount de 3. Isso significa que, após a 3ª tentativa frustrada de leitura, a mensagem é automaticamente movida para uma Dead Letter Queue (DLQ), evitando o processamento infinito de mensagens inválidas e garantindo a saúde do sistema.
+4. Durante a configuração das filas, implementei uma Redrive Policy definindo um maxReceiveCount de 3. Isso significa que, após a 3ª tentativa frustrada de leitura, a mensagem é automaticamente movida para uma Dead Letter Queue (DLQ), evitando o processamento infinito de mensagens inválidas e garantindo a saúde do sistema.
 
 
